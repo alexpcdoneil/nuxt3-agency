@@ -1,0 +1,12 @@
+
+.field-error {
+    padding-top: 0.25rem;
+    color: var(--error-color);
+    font-size: 0.75rem;
+}
+
+.field-hint {
+    padding-top: 0.25rem;
+    color: var(--hint-color);
+    font-size: 0.75rem;
+}

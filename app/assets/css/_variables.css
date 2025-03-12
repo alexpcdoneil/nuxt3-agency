@@ -1,0 +1,19 @@
+:root {
+    --color-primary: #337566;
+    --color-third: #FFF7EB;
+
+    --color-grey: #E8E8E8;
+    --color-black: #0F0F0F;
+    --color-white: #FFFFFF;
+    --color-red: #BD3223;
+
+    --color-primary-text: var(--color-black);
+    /*--color-secondary-text: #F5F5F5;*/
+    --color-third-text: #6B6B6B;
+
+    --container-width: 1745px;
+    --error-color: red;
+    --hint-color: grey;
+    --v-hover-opacity: 0.15;
+    --v-focus-opacity: 0.15;
+}
