@@ -1,8 +1,8 @@
 export interface IProduct {
   id: number
-  name: string
+  description: string
   price: number
-  image: string
+  images: string[]
   status: keyof typeof ProductStatus
   watched: number
   created: string

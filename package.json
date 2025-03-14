@@ -15,6 +15,8 @@
     "@mdi/font": "^7.4.47",
     "@nuxt/eslint": "1.2.0",
     "eslint": "^9.0.0",
+    "h3": "^1.15.1",
+    "jsonwebtoken": "^9.0.2",
     "nuxt": "^3.16.0",
     "nuxt-viewport": "2.2.0",
     "vue": "^3.5.13",

@@ -107,10 +107,6 @@ const viewport = useViewport()
 
   .header-page__btn-new-ad {
     margin-right: 1.5rem;
-
-    @media (max-width: 959px) {
-      display: none;
-    }
   }
 
   .header-page__btn-cart {
@@ -125,13 +121,9 @@ const viewport = useViewport()
 
   @media (max-width: 959px) {
     .header-page__location,
-    .header-page__divide {
-      display: none;
-    }
-  }
-
-  @media (max-width: 959px) {
-    .header-page__btn-category {
+    .header-page__divide,
+    .header-page__btn-category,
+    .header-page__btn-new-ad {
       display: none;
     }
   }

@@ -1,24 +1,36 @@
 <template>
   <div class="product-card">
     <section class="product-card__body">
-      <v-img aspect-ratio="414/322" cover src="public/Img.png" :alt="product?.name" class="product-card__image" />
-      <div v-if="product!.status !== ProductStatus.hidden" class="product-card__labels">
-        <TChip>
-          <template #prepend>
-            <TIcon name="eye" />
-          </template>
-          <span>{{ product.watched }}</span>
-        </TChip>
-        <TChip>
-          <template #prepend>
-            <TIcon name="calendar" />
-          </template>
-          <span>{{ product.created }}</span>
-        </TChip>
-      </div>
+      <v-img
+        aspect-ratio="414/322"
+        cover
+        :src="product.images?.length ? product.images[0] : 'public/fallback.png'"
+        :alt="product?.description"
+        class="product-card__image"
+      >
+        <div v-if="product!.status !== ProductStatus.hidden" class="product-card__labels card-labels">
+          <div class="card-labels__left">
+            <TChip>
+              <template #prepend>
+                <TIcon name="eye" />
+              </template>
+              <span>{{ product.watched }}</span>
+            </TChip>
+            <TChip>
+              <template #prepend>
+                <TIcon name="calendar" />
+              </template>
+              <span>{{ product.created }}</span>
+            </TChip>
+          </div>
+          <div v-if="viewport.isLessThan('desktop')" class="card-labels__right">
+            <VBtn variant="flat" color="secondary">Действия</VBtn>
+          </div>
+        </div>
+      </v-img>
       <div class="product-card__description">
         <p class="product-card__price">{{ formatCurrency(product!.price) }}</p>
-        <h4 class="product-card__name">{{ product!.name }}</h4>
+        <h4 class="product-card__name">{{ product!.description }}</h4>
       </div>
     </section>
     <footer class="product-card__footer">
@@ -48,6 +60,8 @@ defineProps({
     required: true,
   },
 })
+
+const viewport = useViewport()
 </script>
 
 <style scoped>
@@ -76,13 +90,20 @@ defineProps({
     }
 
     .product-card__labels {
-      position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem;
 
-      > *:not(:first-child) {
-        margin-inline-start: 0.25rem;
+      .card-labels__left {
+        > *:not(:first-child) {
+          margin-inline-start: 0.25rem;
+        }
       }
+    }
+
+    .card-labels {
+      display: flex;
+      justify-content: space-between;
     }
 
     .product-card__description {
