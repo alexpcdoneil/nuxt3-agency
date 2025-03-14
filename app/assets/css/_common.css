@@ -10,3 +10,25 @@
     color: var(--hint-color);
     font-size: 0.75rem;
 }
+
+.rounded-sm {
+    border-radius: var(--rounded-sm);
+}
+
+.rounded {
+    border-radius: var(--rounded);
+}
+
+.rounded-md {
+    border-radius: var(--rounded-md);
+}
+
+.hidden-scroll {
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer & Edge */
+}
+
+.hidden-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}

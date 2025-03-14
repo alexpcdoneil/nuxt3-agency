@@ -31,7 +31,7 @@ const viewport = useViewport()
     height: 5.5rem;
     padding-block: 1.5rem;
 
-    @media (max-width: 640px) {
+    @media (max-width: 959px) {
       flex-direction: column;
       padding-block: 1.5rem 2.5rem;
       height: auto;

@@ -1,0 +1,41 @@
+.v-btn.v-theme--customTheme {
+    --v-btn-height: initial;
+    letter-spacing: normal;
+    text-transform: none;
+    min-width: auto;
+
+    &.primary-text {
+        color: var(--color-primary);
+    }
+
+    &:not(.v-btn--rounded) {
+        border-radius: var(--rounded-sm);
+    }
+
+    &.bg-primary {
+        background-color: var(--color-primary);
+        color: #F5F5F5;
+    }
+
+    &.bg-secondary {
+        background-color: var(--color-grey);
+        color: var(--color-black);
+    }
+
+    &.v-btn--size-large {
+        padding: 1rem 1.25rem;
+    }
+
+    &.v-btn--size-default {
+        padding: 0.5rem 0.75rem;
+    }
+
+    &.v-btn--variant-text {
+        padding: 0.5rem 0.75rem;
+    }
+
+    > .v-btn__content {
+        text-transform: none;
+        line-height: 1.5;
+    }
+}

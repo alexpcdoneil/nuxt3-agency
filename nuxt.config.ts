@@ -12,6 +12,13 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
+
   modules: [
     "@nuxt/eslint",
     "nuxt-viewport",
@@ -33,7 +40,7 @@ export default defineNuxtConfig({
 
   viewport: {
     breakpoints: {
-      desktop: 640,
+      desktop: 960,
       mobile: 0,
     },
     defaultBreakpoints: {

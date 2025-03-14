@@ -1,4 +1,5 @@
-@import '_modern-normalize.css';
+@import 'plugins/_modern-normalize.css';
+@import 'plugins/_vuetify.css';
 
 @import '_variables.css';
 

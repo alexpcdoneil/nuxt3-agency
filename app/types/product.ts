@@ -4,6 +4,8 @@ export interface IProduct {
   price: number
   image: string
   status: keyof typeof ProductStatus
+  watched: number
+  created: string
 }
 
 export enum ProductStatus {

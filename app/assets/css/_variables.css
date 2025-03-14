@@ -16,4 +16,12 @@
     --hint-color: grey;
     --v-hover-opacity: 0.15;
     --v-focus-opacity: 0.15;
+
+    --rounded-sm: 0.75rem;
+    --rounded: 1.1875rem;
+    --rounded-md: 1.25rem;
+
+    --px-mobile-container: 1rem;
+    --px-desktop-container: 2rem 2.5rem;
 }
+

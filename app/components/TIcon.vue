@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { computed, toRefs } from "vue"
-import spriteUrl from "@/assets/img/sprite.svg?url"
+import spriteUrl from "assets/img/sprite.svg?url"
 
 const props = defineProps({
   name: {
